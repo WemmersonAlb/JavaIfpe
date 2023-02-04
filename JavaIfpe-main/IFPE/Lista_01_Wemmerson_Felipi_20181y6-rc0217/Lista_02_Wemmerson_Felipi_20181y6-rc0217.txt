@@ -1,0 +1,86 @@
+﻿Lista de Exercícios 2
+
+Aluno: Wemmerson Felipi
+Matrícula:20181y6-rc0217
+
+
+1.Explique em linhas gerais o que você compreendeu sobre classes, construtores, métodos e objetos.
+
+R- Objeto é uma abstração de algo do mundo real para o virtual, afim de ser representado em um sistema (exemplo: um sistema de folha de ponto, utiliza um objeto pessoa que é uma abstração da pessoa do mundo real). Classe é basicamente um molde que engloba tudo de um objeto dentro de um sistema, envolve os dados que esse objeto possui e o que esse objeto pode fazer. Construtores servem para construir de maneira responsável um objeto dentro de um sistema, os dados que possuem e as suas ações iniciais. Métodos são as ações que esse objeto pode ter dentro do sistema.
+
+2.Implemente a classe Account da figura 3.1. Explique o código brevemente.
+
+R-Feito
+
+3.Que modificadores de acesso há neste código? Qual o efeito deles?
+
+R-Private e Public. Private faz com que o dado/método que carrega este modificador seja visível apenas pela própria classe, impedindo assim seu uso indevido. Public permite que o código seja visível de fora da classe, permitindo sua manipulação.
+
+4.Implemente, compile e rode o código de AccountTest na figura 3.2. Explique brevemente o papel desta classe em relação à classe Account.
+
+R-Feito
+
+5.Qual a vantagem de termos métodos get e set em uma classe? Se preciso veja a seção 3.2.6. (pág. 63)
+
+R-Podemos fazer o refinamento de suas entradas e saídas, com o método set podemos fazer uma inspeção no tipo de dado que está entrando e se este dado faz sentido ou não, desta maneira aumentamos o grau de confiança da classe, o mesmo pode ocorrer com o método get no sentido de colocar mais informações na sua saída, como por exemplo classificações extras que variam conforme aquilo que está sendo exposto.
+
+6.Explique um teste útil que podemos fazer com o valor null. Dica: veja seção 3.2.2 e 3.3.
+
+R-Podemos utilizar esta propriedade do Java para verificar campos que ainda não foram inicializados de um objeto e requerer isto do usuário.(?) Falar com Abadie sobre.
+
+7-Modifique a classe Account de acordo com a figura 3.5. No construtor (ou no doc), responda: como o Java sabe a diferença entre um construtor e um método? Explique os dois critérios: nome e retorno.
+
+R-O Java detecta pelo nome quando um método é construtor pois construtores possuem o nome da classe como seu próprio nome, porém é comum classes terem mais de um construtor, neste caso o Java detecta pelo tipo de entrada os diferentes construtores de tal forma que não podem haver construtores diferentes com as mesmas quantidades e tipos de entrada.
+
+8.Explique o que ocorre com o código de AccountTest depois que você implementou a última questão.
+
+A)Ainda compila? Ainda roda? 
+
+R-O Eclipse acusa o erro e deixa de rodar.
+
+B)Porque? Veja a seção 3.4.2, pág. 66 (construtores padrão).
+
+R-Como não tinhamos construtores, o Java permitia que instanciássemos o objeto de qualquer maneira, porém na questão passada criamos um construtor e devemos obedecê-lo, como a classe AccountTest não constrói o objeto Account com a entrada solcitada por seu construtor, o Eclipse acusa o erro e deixa de funcionar.
+
+9.Modifique AccountTest de acordo com a figura 3.6. Execute e explique o que acontece (acho que 1 linha explica).
+
+R-Instanciamos 2 objetos Account e passamos os valores iniciais de name (como manda o construtor). Posteriormente exibimos os valores de name de cada objeto, e visualizamos o name informado durante a fase de instanciamento do objeto.
+
+10.Modifique Account de acordo com a figura 3.8. (pág.67), mas agora sem remover o construtor "Account(String name)". Execute AccountTest: compila? executa?
+
+R-Compila e executa.
+
+11.Explique como as linhas 17 e 24 da figura 3.8 ajudam a classe a manter a integridade dos valores internos de Account.
+
+R-Eles filtram os valores antes de passar para os dados internos da classe, isso significa que o método e o construtor possuem responsabilidade com os dados, impedindo que valores que não façam sentido poluam o código desenvolvido.
+
+12.Modifique AccountTest de acordo com a fig. 3.9 (pág.68) e execute. O que ocorre com os valores de saldo das duas contas? Relacione este resultado com sua explicação da questão anterior (11).
+
+R- Inicialmente uma das contas fica zerada devido a uma entrada de valor negativo. A classe Account tem um construtor que faz uma filtragem e só permite entrada de valores positivos, por isso que a inicialização do account2 fica com 0.00 no balance.
+
+13.Leia a seção sobre código duplicado na página 70 e veja as linhas que esta seção indica. Explique porque é ruim ter código duplicado e como você poderia melhorar a capacidade de seu código ser mantido, no futuro.
+
+R- Código duplicado implica em difícil manutenção futura pois quaisquer alterações que possamos querer realizar necessitará ser aplicada em todas as ocorrências em nosso sitema. Para isso podemos criar métodos e invocá-los em nosso main, assim que precisarmos realizar alterações, o faremos no método, assim essas alterações valerão para todas as invocações, tornando muito mais simples e rápido a manutenção do código.
+
+14.Crie e execute o código da classe Dialog1, figura 3.12 (pág. 71), colocando um texto seu em português.
+
+R- Feito.
+
+15.Crie e execute o código da classe NameDialog, figura 3.13. pág.72. Explique o que ele faz.
+
+R- Pergunta ao usuário o seu nome via caixa de diálogo e posteriormente exibe uma mensagem utilizando o nome informado, isso tudo usando uma biblioteca importada.
+
+16.Implemente a questão 3.15, pág. 77, que pede para remover código duplicado no método main. Lembre-se de sempre deixar as linhas a serem removidas como comentários, para que eu saiba que você realmente realizou o que foi pedido.
+
+public static void displayAccount(Account accountToDisplay)
+
+R-Feito.
+
+17.Inspirado no seu código da questão 15, da classe NameDialog, crie o método a seguir. O que ele faz é muito parecido com displayAccount. Porém, você deverá gerar um texto (String) e usá-lo para exibir o valor da conta, usando uma janela gráfica.
+
+public static void displayAccountGrafico(Account accountToDisplay)
+
+Use o seguinte código para gerar textos.
+String texto = String.format("O valor é [%d]", 42);
+
+R-Feito

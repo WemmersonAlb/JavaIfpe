@@ -1,0 +1,26 @@
+Lista de Exercícios 2
+
+Aluno: Wemmerson Felipi
+Matrícula:20181y6-rc0217
+
+
+1.Explique em linhas gerais o que você compreendeu sobre classes, construtores, métodos e objetos.
+
+R- Objeto é uma abstração de algo do mundo real para o virtual, afim de ser representado em um sistema (exemplo: um sistema de folha de ponto, utiliza um objeto pessoa que é uma abstração da pessoa do mundo real). Classe é basicamente um molde que engloba tudo de um objeto dentro de um sistema, envolve os dados que esse objeto possui e o que esse objeto pode fazer. Construtores servem para construir de maneira responsável um objeto dentro de um sistema, os dados que possuem e as suas ações iniciais. Métodos são as ações que esse objeto pode ter dentro do sistema.
+
+2.Implemente a classe Account da figura 3.1. Explique o código brevemente.
+
+R-Feito
+
+3.Que modificadores de acesso há neste código? Qual o efeito deles?
+
+R-Private e Public. Private faz com que o dado/método que carrega este modificador seja visível apenas pela própria classe, impedindo assim seu uso indevido. Public permite que o código seja visível de fora da classe, permitindo sua manipulação.
+
+4.Implemente, compile e rode o código de AccountTest na figura 3.2. Explique brevemente o papel desta classe em relação à classe Account.
+
+R-Feito
+
+5.Qual a vantagem de termos métodos get e set em uma classe? Se preciso veja a seção 3.2.6. (pág. 63)
+
+R-Podemos fazer o refinamento de suas entradas e saídas, com o método set podemos fazer uma inspeção no tipo de dado que está entrando e se este dado faz sentido ou não, desta maneira aumentamos o grau de confiança da classe, o mesmo pode ocorrer com o método get no sentido de colocar mais informações na sua saída, como por exemplo classificações extras que variam conforme aquilo que está sendo exposto.
+

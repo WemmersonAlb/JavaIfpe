@@ -1,0 +1,109 @@
+﻿Lista de Exercícios 1 
+
+Aluno: Wemmerson Felipi
+Matrícula: 20181y6-rc0217
+
+
+1. Crie um projeto no Eclipse segundo o seguinte tutorial. Descreva sua experiência. Você pode usar o tutorial disponível no ava.
+   1. Crie um pacote "capitulo_02" no seu projeto e coloque todas as classes deste exercício dentro dele. Pode usar o tutorial em vídeo do ava, que mostra como fazer.
+
+R- Utilizando os vídeos do AVA e o conhecimento adquirido em aula, a criação de projeto e pacote se deram de maneira tranquila.
+
+
+2. Explique em linhas gerais o que você compreendeu sobre o exemplo da figura 2.1 na página 28. Quantas classes e métodos você vê?
+
+R- Compreendi que para que um programa em Java possa ser executado ele precisa de no mínimo uma classe (que abrigará o método main) e um método (o método main em si), desta maneira conseguimos executar qualquer programa, seja uma simples impressão de uma frase na tela, ou chamando outras classes com seus dados e métodos para que possamos rodar um sistema complexo. No exemplo em questão é possível verificar a existência de uma classe e um método.
+
+
+3. Execute o código da figura 2.1 e observe a saída. Explique o que você precisou fazer para compilar e executar o código.
+
+R- Foi necessário criar uma classe (nomeei-a de “questao_03”), criei o método main e escrevi o comando da figura 2.1, o “System.out.println(“Welcome to Java Programming”);”. Após isso salvei o código e executei. A saída foi igual ao esperado.
+
+
+4. Modifique o código comentando a linha 9. Depois se inspire nela para imprimir:
+   1. O texto "Bem-vindo, "
+   2. Seu nome e matrícula
+   3. o texto " ! Saudações!"
+   4. Uma quebra de linha.
+   5. Use os métodos "print()" e "println()", até a próxima orientação sobre métodos. Lá na frente usaremos printf.
+   6. Use uma linha diferente de código para cada item.
+
+R-Feito (Classe "questão_03").
+
+
+5. Insira uma nova linha de código que imprime outra cópia do mesmo texto, mas agora utilize um único objeto String. Ou seja, seu texto vai todo entre "".
+
+R-Feito (Classe "questão_03").
+
+
+6. Insira uma nova linha de código que imprime outra cópia do mesmo texto, mas agora cada palavra vai em uma linha diferente. Utilize um único objeto String. Ou seja, seu texto vai todo entre "". Se inspire no código da figura 2.4.
+
+R- Feito (Classe "questão_03").
+
+
+7. Insira um novo conjunto de linhas, baseado nas suas respostas anteriores. Imprima o mesmo texto do item 3)  (não do item 4), ok?) , mas dessa vez insira um caractere de tabulação antes de cada linha. Cada palavra inserida vai em uma linha diferente. Veja a figura 2.5 para ajudar.
+
+R- Feito (Classe "questão_03").
+
+
+8. Crie um novo bloco de código inspirado no anterior. Faça sua saída da questão anterior apresentar o mesmo texto, porém desta vez inclua na sua saída aspas duplas. Cuidado com as seqüências de escape.
+Use os dois caracteres \" dentro de seu texto para obter este efeito.
+
+R- Feito (Classe "questão_03").
+
+
+9. Crie quatro variáveis do tipo String, para seu nome, sua matrícula, a data/hora em que você está programando agora e mais outro texto qualquer que você escolheu livremente (não vale a string vazia).
+Refaça o código em 4)3) usando essas variáveis,mas execute sua impressão com o System.out.printf.
+
+R- Feito (Classe "questão_03").
+
+
+10. Execute o código da figura 2.7, página 36, traduzindo para o português os textos que são impressos. Explique como o programa funciona do ponto de vista do usuário (o programa faz isso, depois aquilo...). Descreva o que aconteceu em poucas linhas. Note que aqui você terá que criar uma nova classe no seu projeto, então as respostas irão no arquivo desta nova classe.
+
+R- O programa primeiro solicita um número, depois outro, logo após o programa realiza a soma desses dois números. Então ele mostra o resultado.
+(Classe "questão_10").
+
+
+11. Explique em detalhes a linha 11 da figura 2.7, indicando exatamente o que acontece ali, que código está executando e como os objetos envolvidos trabalham em conjunto.
+
+R- O programa instancia um objeto Scanner numa variável, desta forma temos acesso aos métodos contidos na classe desse objeto. No programa em questão temos interesse no método nextInt (linhas 18 e 21), e é graças a este instanciamento na variável “input”, que conseguimos fazer seu uso. (Classe "questão_10").
+ 
+12. Comente a linha 3, tente compilar e observe o que acontece. O que ocorre com a linha 11? Por que isto ocorre? Qual o papel da linha 3?
+
+R- O Java aponta um erro. A linha 11 depende da linha 3 para poder rodar com sucesso. Isto deve-se ao fato de nosso sistema precisar de uma biblioteca externa que contém a classe Scanner. Sem esta biblioteca não temos a classe Scanner, e por consequência não temos como fazer instâncias de seu objeto para utilizarmos seus métodos. Nosso código possui uma dependência direta com relação a esta biblioteca. (Classe "questão_10").
+
+
+13. Execute o código da figura 2.15 (nova classe aqui!), passando inteiros para cada entrada. Traduza as mensagens de saída nas linhas 17 e 20. Explique o que ele faz em duas ou 3 linhas (por favor: comentários no código, antes da classe).
+
+R- O programa solicita ao usuário duas entradas numéricas, então faz uma série de comparações. Se os números se encaixam em um ou mais tipos de comparação, uma mensagem é mostrada no final correspondente ao tipo de comparação. (Classe "questão_13").
+
+
+14. Modifique o código para adicionar impressões ao final. A saída deve usar printf e deve mostrar, em cada linha separada: a soma, a subtração, a multiplicação, a divisão e também o resto da divisão inteira entre os dois valores.
+Exemplo de formato:
+    "A soma de 12 e 3 é 15"
+Ou então
+    "O resultado 12 + 3 => 15, uhú! funciona esse treco!".    
+Sinta-se livre para mexer no texto de saída, mas garanta que os valores
+estão corretos.
+
+R- Feito (Classe "questão_13").
+
+
+15. Execute o código da questão anterior, mas quando o programa pedir entrada, digite letras ao invés de números. Explique o que ocorre com seu código.
+
+R- O java aponta um erro no console. Provavelmente a classe Scanner tem em seu método “nextInt” uma maneira de tratar aquilo que está sendo recebido do usuário, e uma vez que colocamos letras em vez de um tipo “int”, o método já aponta um erro interrompendo a execução do programa. (Classe "questão_13").
+
+
+16. Execute o código da questão anterior. Se um dos valores de entrada for zero, deve ocorrer um erro em uma das operações. Faça o teste e veja o que acontece. Diga qual das entradas causa o erro, qual a operação que falha e por quê. Depois, modifique seu código para testar essa condição (com if) e evitar que o erro ocorra, imprimindo uma mensagem que explique ao seu usuário como proceder para obter o resultado correto.
+
+R- O erro ocorre ao colocar o segundo número igual a 0, isso ocorre pois colocamos o sistema para calcular a divisão do número1 pelo número2, e não existe divisão com denominador igual a zero. (Classe "questão_13").
+
+17. Crie a classe “Exercícios” e Implemente dentro dela os exercícios 2.3, 2.4, 2.5 e 2.6 (página 49), sempre com mensagens em português.
+Tente fazer um código que seja seu, de forma a melhorar a sua experiência de programação. Se depois de uma hora de trabalho você perceber que está travado, pode consultar as respostas na página seguinte para implementar o código. Não faça isso antes de tentar ou jogará fora a chance de aprender.
+Lembre-se das dicas no arquivo de orientações gerais. Lá eu digo que no mercado de trabalho ninguém irá perguntar suas notas. Mas todo mundo irá saber se você consegue ou não programar, simplesmente pelos seus resultados. Isso é impossível de esconder.
+A responsabilidade da escolha é sua. Faça uma boa escolha, pelo bem do seu futuro profissional.
+
+R- Exercício 2.4
+A)O erro está em colocar ponto e vírgula após o if. É como se o System.out não estivesse associado ao if.
+B)O erro está em colocar o "maior quê(>)" após o igual. A sintaxe do Java diz que o certo seria (>=).
+Exercício 2.3, 2.5 e 2.6 feitos (classe "Exercícios").
